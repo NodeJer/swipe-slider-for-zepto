@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="h100p">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<title>swipe slider Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="stylesheet" href="./styles/reset.css">
+<link rel="stylesheet" href="./styles/swipe.css">
+<style>
+	body{
+		background-color: #111
+	}
+</style>
+<script src="js/zepto.min.js"></script>
+<script src="js/zepto.touch.js"></script>
+<script src="js/zepto.animate.js"></script>
+<script src="js/zepto.swipe.js"></script>
+</head>
+<body class="h100p">
+	<div class="swipe" id="swipe">
+		<div class="list">
+			<a class="item" href="###" data-index="1"></a>
+			<a class="item" href="###" data-index="2"></a>
+			<a class="item" href="###" data-index="3"></a>
+			<a class="item" href="###" data-index="4"></a>
+			<a class="item" href="###" data-index="5"></a>
+		</div>
+		<ul class="btn-list">
+			<li class="item active"></li>
+			<li class="item"></li>
+			<li class="item"></li>
+			<li class="item"></li>
+			<li class="item"></li>
+		</ul>
+	</div>
+	<script>
+		var swipe = new Swipe('#swipe');
+
+		swipe.query([
+			{
+				width: '<=1024',
+				directory: './images/1024/',
+				name: 'data-index',
+				type: '.jpg'
+			},
+			{
+				width: '<=640',
+				directory: './images/640/',
+				name: 'data-index',
+				type: '.jpg'
+			}
+		]);
+	</script>
+</body>
+</html>

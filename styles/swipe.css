@@ -1,0 +1,45 @@
+.swipe, 
+.swipe .list, 
+.swipe .list .item{
+	width: 100%; height: 100%;
+}
+.swipe{
+	position: relative;
+	height: 200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.swipe .list{
+	white-space: nowrap;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+.swipe .list .item{
+	display: inline-block;
+	text-align: center;
+	background-size: 100% 100%;
+}
+.swipe .btn-list{
+	position: absolute; bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+.swipe .btn-list .item{
+	display: inline-block;
+	width: 10px; height: 10px;
+	margin: 0 5px;
+	border-radius: 10px;
+	background-color: #141414;
+	box-shadow: inset 0 1px 3px black, 0 0 1px 1px #202020;
+	cursor: pointer;
+}
+.swipe .btn-list .active{
+	box-shadow: inset 0 1px 3px -1px #28b4ea,0 1px 2px rgba(0,0,0,.5);
+	background-color: #0f6297;
+	background-image: -webkit-linear-gradient(top,#1293dc,#0f6297);
+	background-image: -moz-linear-gradient(top,#1293dc,#0f6297);
+	background-image: -ms-linear-gradient(top,#1293dc,#0f6297);
+	background-image: -o-linear-gradient(top,#1293dc,#0f6297);
+	background-image: linear-gradient(top,#1293dc,#0f6297);
+}
