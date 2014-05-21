@@ -2,13 +2,13 @@
 
 	if(typeof define === 'function' && define.cmd){
 		define(function(require, exports, module){
-			module.exports = factory();
+			module.exports = factory($);
 		});
 	}
 	else{
-		root.Swipe = factory();
+		root.Swipe = factory($);
 	}
-})(window, Zepto, function(){
+})(window, Zepto, function($){
 	var android = navigator.userAgent.toLowerCase().search('android 2.3.6');
 	var type = android?'margin-left':'translate';
 
